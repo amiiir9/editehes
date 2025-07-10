@@ -54,7 +54,7 @@ async def handle_photo(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_photo(photo=update.message.photo[-1].file_id, caption=f"[Mock edit for {product_type}]")
 
 if __name__ == '__main__':
-    app = ApplicationBuilder().token(TOKEN).build()
+    app = ApplicationBuilder().token(7652437692:AAETq862nXc7H-zqRDNixesAawjM3-0XKxk).build()
     app.add_handler(CommandHandler("start", start))
     app.add_handler(CallbackQueryHandler(handle_button))
     app.add_handler(MessageHandler(filters.PHOTO, handle_photo))
